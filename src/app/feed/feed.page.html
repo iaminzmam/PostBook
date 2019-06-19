@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Feed</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card>
+        <ion-card-header color="primary">Inzamamul Haque</ion-card-header>
+        <ion-img src='https://ionicframework.com/docs/demos/api/card/madison.jpg'></ion-img>
+        <ion-card-content>
+            <p>Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.</p>
+        </ion-card-content>
+        <ion-item (click)="toggleHeart()">
+          <ion-icon slot="start" size="large" name="heart-empty"></ion-icon><span slot="end" class="timestamp">23:11<br>13-06-2019</span>
+
+        </ion-item>
+    </ion-card>
+
+    <!--
+    <ion-card *ngFor="let post of posts">
+        <ion-card-header color="primary">Inzamamul Haque</ion-card-header>
+        <ion-img src='https://ucarecdn.com/{{ post.image }}/-/preview/200x200/'></ion-img>
+        <ion-card-content>
+            <p>  {{ post.desc }} </p>
+        </ion-card-content>
+        <ion-item (click)="toggleHeart()">
+          <ion-icon slot="start" size="large" [name]="heartType"></ion-icon><span slot="end" class="timestamp">23:11<br>13-06-2019</span>
+
+        </ion-item>
+     </ion-card>
+
+    -->
+    
+</ion-content>

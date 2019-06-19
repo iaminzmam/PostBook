@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar> 
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="noScroll">
+        <input id="profileinput" type="file" (change)="changeProfile($event)" #fileButton />
+      <ion-item class="proData" lines="full">
+        <ion-avatar slot="start" class="profileAvatar" (click)="uploadProfile()">
+          <ion-img src='{{ profilepic }}' ></ion-img> 
+        </ion-avatar>
+        <ion-item lines="none" slot="end">
+            <div class="profileName">
+                <h5>{{ username }}</h5>
+                <ion-button shape="round" >Follow</ion-button>
+            </div>
+        </ion-item>
+      </ion-item>
+    
+
+      <div id="images" >
+            <div class="image" *ngFor="let post of posts" >
+                <ion-card><ion-img src="https://ucarecdn.com/{{ post }}/-/preview/200x200/"></ion-img></ion-card>
+            </div>
+      </div>
+      
+
+</ion-content>

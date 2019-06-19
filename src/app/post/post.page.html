@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Post</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+    <div class="center" *ngIf="!imgURL">
+
+      <input class="fileBtn" type="file"  (change)="uploadPost($event)" #fileButton />
+    
+      <ion-button shape="round" color="dark" fill="outline" (click)="addFile()">Upload Image</ion-button>
+    </div>
+
+    <ion-card *ngIf="imgURL">
+
+            <ion-grid >
+              <ion-row>
+                  <ion-col size="12">
+                      <ion-img class="mainImage" src='https://ucarecdn.com/{{imgURL}}/-/preview/-/stretch/fill/-/progressive/yes/{{ activeEffect }}' ></ion-img>
+                      <ion-card-content>
+                          <ion-textarea rows="2" cols="30" placeholder="Enter Description" [(ngModel)]="desc"></ion-textarea>
+                      </ion-card-content>
+                  </ion-col>
+              </ion-row>
+        
+              <ion-row >
+                  <ion-col (click)="setFilter('')">
+                      <ion-img src='https://ucarecdn.com/{{imgURL}}/-/preview/100x100/{{ filters.original }}' ></ion-img>
+                  </ion-col>
+
+                  <ion-col (click)="setFilter('adaris')">
+                      <ion-img src='https://ucarecdn.com/{{imgURL}}/-/preview/100x100/{{ filters.adaris }}' ></ion-img>
+                  </ion-col>
+
+                  <ion-col (click)="setFilter('carris')">
+                      <ion-img src='https://ucarecdn.com/{{imgURL}}/-/preview/100x100/{{ filters.carris }}' ></ion-img>
+                  </ion-col>
+
+                  <ion-col (click)="setFilter('misiara')">
+                      <ion-img src='https://ucarecdn.com/{{imgURL}}/-/preview/100x100/{{ filters.misiara }}' ></ion-img>
+                  </ion-col>
+                  <ion-col (click)="setFilter('vevera')">
+                      <ion-img src='https://ucarecdn.com/{{imgURL}}/-/preview/100x100/{{ filters.vevera }}' ></ion-img>
+                  </ion-col>
+                  
+                
+                </ion-row>
+          </ion-grid>
+    </ion-card>
+      
+
+      <ion-fab *ngIf="imgURL"  vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="createPost()">
+          <ion-icon name="send"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+</ion-content>

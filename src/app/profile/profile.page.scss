@@ -1,0 +1,34 @@
+.proData {
+    margin: 10px auto;
+    
+}
+
+#profileinput {
+    opacity: 0;
+    position: absolute;
+    top: -100em;
+    left: -100em;
+}
+.profileAvatar{
+    width: 80px;
+    height: 80px;
+
+}
+
+.profileName {
+    display: inline-block;
+    
+}
+
+ion-card {
+    margin: 2px;
+}
+#images {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.image {
+    width: 33%;
+}
+

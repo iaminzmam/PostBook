@@ -1,0 +1,8 @@
+{
+  "name": "postbook",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "1e93b67e"
+}
